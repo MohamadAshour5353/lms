@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- remixicons Library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Boxicons Library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- Tab Title -->
+    <title>Laptops Management System | </title>
+</head>
+
+<body>
+    <div class="loader-bg">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Sidebar starting @@@-->
+    <div id="saidebar" class="sidebar position-fixed top-0 bottom-0 border-end bg-white">
+        <div class="d-flex align-items-center p-3" style="background: url(Abs.png);">
+            <a href="#" class="sidebar-logo text-uppercase fw-bold text-decoration-none text-indigo fs-4"></a>
+            <img src="logo.png" alt="ic&i logo">
+            </a>
+
+        </div>
+        <div class="side-p2">
+            <ul class="sidebar-menu p-3 m-0 mb-0">
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span id="linkdes1" style=" font-size:0.9rem; color: #012060;" class="hide-menu">Main Pages</span>
+                </li>
+                <div>
+                    <div></div>
+                </div>
+                <!-- item 1 -->
+                <li id="hovli" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-dashboard-fill sidebar-menu-item-icon"></i>
+                        Home
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul" class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="main.php">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span style="color: #012060; font-size:0.9rem;" class="hide-menu">Laptops Logics</span>
+                </li>
+                <div>
+                    <div></div>
+                </div>
+                <!-- item 2 -->
+                <li id="hovli2" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-add-box-fill sidebar-menu-item-icon"></i>
+                        Add Device
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul2" class="sidebar-dropdown-menu" style="display: block;">
+                        <li class="sidebar-dropdown-menu-item">
+
+                            <a href="add.php">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Add Laptop Info
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- item 3 -->
+                <li id="hovli3" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-database-2-fill sidebar-menu-item-icon"></i>
+                        System Data
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul3" class="sidebar-dropdown-menu" style="display: block;">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="data.php">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Laptops Data
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+        <div class="sidebar-overlay"></div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Sidebar Ending @@@-->
+
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////Main Content Starting @@@-->
+    <main class="bg-light">
+        <div class="p-2">
+            <!-- Header Nav Starting -->
+            <nav class="px-3 py-2 bg-white rounded shadow">
+                <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                <h5 id="HeadTitle" class="fw-bold mb-0 me-auto">Dashboard</h5>
+                <div class="dropdown me-3 d-none d-sm-block">
+                    <div class="cursor-pointer dropdown-toggle navbar-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="me-2 d-none d-sm-block">Admin.IC&I</span>
+                        <img class="navbar-profile-image" src="icon.png" alt="Image">
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"><i class="ri-logout-box-fill"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Header Nav Ending -->
+        </div>
+        <div class="alert alert-primary" role="alert" id="DAlert">
+            Welcome To IC&I Laptops System /<a id="AlertHref" href="data.html" class="alert-link"> Laptops Data</a>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="group">
+                    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                            </path>
+                        </g>
+                    </svg>
+                    <input placeholder="Search" type="search" class="input" id="SearchTable">
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <center>
+                    <table class="content-table" id="LapTa">
+                        <thead <tr>
+                            <th>ID</th>
+                            <th>Laptop Brand</th>
+                            <th>CPU</th>
+                            <th>RAM</th>
+                            <th>Storage</th>
+                            <th>Serial Number</th>
+                            <th>Notes</th>
+                            <th>Location</th>
+                            <th>Employee Name</th>
+                            <th>City</th>
+                            <th>Starting Date</th>
+                            <th>Ending Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </center>
+            </div>
+
+        </div>
+    </main>
+
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////Main Content Ending @@@-->
+
+    <!-- JQERy JS File -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS File -->
+    <script src="js/scripts.js"></script>
+    <!-- Chart JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Charts Files -->
+    <script src="/charts/dchart1.js"></script>
+    <script src="/charts/dchart2.js"></script>
+    <script src="/charts/dchart3.js"></script>
+    <script src="/charts/dchart4.js"></script>
+</body>
+
+</html>

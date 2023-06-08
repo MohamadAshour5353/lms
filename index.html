@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- remixicons Library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Boxicons Library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- Tab Title -->
+    <title>Laptops Management System | </title>
+</head>
+
+<body>
+    <div class="loader-bg">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Sidebar starting @@@-->
+    <div id="saidebar" class="sidebar position-fixed top-0 bottom-0 border-end bg-white">
+        <div class="d-flex align-items-center p-3" style="background: url(Abs.png);">
+            <a href="#" class="sidebar-logo text-uppercase fw-bold text-decoration-none text-indigo fs-4"></a>
+            <img src="logo.png" alt="ic&i logo">
+            </a>
+
+        </div>
+        <div class="side-p2">
+            <ul class="sidebar-menu p-3 m-0 mb-0">
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span id="linkdes1" style=" font-size:0.9rem; color: #012060;" class="hide-menu">Main Pages</span>
+                </li>
+                <div>
+                    <div></div>
+                </div>
+                <!-- item 1 -->
+                <li id="hovli" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-dashboard-fill sidebar-menu-item-icon"></i>
+                        Home
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul" class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="index.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span style="color: #012060; font-size:0.9rem;" class="hide-menu">Laptops Logics</span>
+                </li>
+                <div>
+                    <div></div>
+                </div>
+                <!-- item 2 -->
+                <li id="hovli2" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-add-box-fill sidebar-menu-item-icon"></i>
+                        Add Device
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul2" class="sidebar-dropdown-menu" style="display: block;">
+                        <li class="sidebar-dropdown-menu-item">
+
+                            <a href="add.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Add Laptop Info
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- item 3 -->
+                <li id="hovli3" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-database-2-fill sidebar-menu-item-icon"></i>
+                        System Data
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul3" class="sidebar-dropdown-menu" style="display: block;">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="data.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Laptops Data
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+        <div class="sidebar-overlay"></div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Sidebar Ending @@@-->
+
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////Main Content Starting @@@-->
+    <main class="bg-light">
+        <div class="p-2">
+            <!-- Header Nav Starting -->
+            <nav class="px-3 py-2 bg-white rounded shadow">
+                <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                <h5 id="HeadTitle" class="fw-bold mb-0 me-auto">Dashboard</h5>
+                <div class="dropdown me-3 d-none d-sm-block">
+                    <div class="cursor-pointer dropdown-toggle navbar-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="me-2 d-none d-sm-block">Admin.IC&I</span>
+                        <img class="navbar-profile-image" src="icon.png" alt="Image">
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"><i class="ri-logout-box-fill"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Header Nav Ending -->
+        </div>
+        <div class="alert alert-primary" role="alert" id="DAlert">
+            Welcome To IC&I Laptops System /<a id="AlertHref" href="index.html" class="alert-link"> Dashboard</a>
+        </div>
+        <div class="charts">
+            <div class="chart-card">
+                <img class="ico-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAARtJREFUSEvtlU2KwkAQhV9F9xOi+8nQ7ucARog38AgzJ9AbqCfQ3MQbKBgP4N6I7rVp14ol0SRGyUjD+AOSXqWb0F/99KtHeMKiJzCgBSmJ2g+DewDMKChFoN91MB7oBKkFsYTTB9C8uJDQlTO/cz9IxemA0c4hej15dblM2zWNwrbHIDvumQHy0i/v35mUK467ZwwvXxkvZDD5is8eBAFk4Cd3Jx8lUWsw83cqIiXnvhfurRs9yc7kD4glqgqgj3TaBqG+mvmjO0IcvlZvDgkrktl4S+TlyhLj+5SLNzKYxC56tt+T4LiVCJIw3e+KrlqM1HEagEN3/Iy0tCRQKxyCpu3aRnE3ACOaFrwBUT/tmlqzS8dib/3zPpADj9sWKZg4LyEAAAAASUVORK5CYII=" />
+                <h2 class="chart-title">Laptops Brands</h2>
+                <hr>
+                <canvas id="laptopbrand"></canvas>
+            </div>
+            <div class="chart-card">
+                <img class="ico-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAQJJREFUSEvtlV0OwUAUhc8t7+pnAZJagHcVtQJ2gB2wEnaAHbACFfVuASaxAGq80yuVtDEhkirz1D7P3K/fycwZgoaPNDCgH2JWHZNy1ykAM4Wh5Ft+IA+ujGYoJkWrsSBQJwXgsZXBy7PYdt9CypbtMtAC88gwaJcUFgRcB9EYgPSFV/wIMQjt495zk0IqNdsJGKtwny+8OCUlrsgkg2RxJTpgWVz/iwuMYfBFrRiPWsEE4IsvtnHJKje+ZDVnAPcS/f7bxTT3xab/0l3hyWBQgZlnaaueiPo3QMr9Zh2CYpOSZXN6A3VCVJIxJCzHX0NOwnMUk18Dnufpf+P/ZaPF5A7jE7wachdolwAAAABJRU5ErkJggg==" />
+                <h2 class="chart-title">CPU Types</h2>
+                <hr>
+                <canvas id="cpuinfo"></canvas>
+            </div>
+        </div>
+        <div class="charts">
+            <div class="chart-card">
+                <img class="ico-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAYtJREFUSEvFlkFSwkAQRX8P7o3BvWB0LWsJJZ5AvIE3MJ5AOYF4A24gnEAsguvsJRr3EsNepi2RhIQETSUpnN1Uze83vzt/KoQNLNoAA4mQstZoMfM1CLXUl2BYRNSe2MPeqiYGUSpNRZQ+XwEoqQHLg56cbVU9Z+CFtTHI3AX4PgNgLiHQ+aqbGETV9A6Ay6wQAHeubRp/ONEHDJxkhRDwOLHN5q8QVdM5K8DXubYZ6VBks3ugNyXjIS9EEE7fx+bArxOBqPt1A0S3eSFgvnJfRt+zXXwMoYo7Wr1HoLO8EAb3P+xRKxFS1hoXTFzJCyEmZ2IPu4mQvMXX6SMzUQ6Pa2ImcrdLlmTfe36yYk4KCOGqkSCUgRNV0x0Ae8W1jB3XHlV/nprFyhDCNwIcJihgHAE8JZC13AN+KLNDCG13bN74Afafk3Cg80PAXUmiKyTXQOiAYUlBRrBHEU5SDC/mpKi0++xw6oOZzDMiSwYgWwBtp7jomiM8BURPilnHz8r//Uhkd5Gs3IiTL/ELnxqy6ceuAAAAAElFTkSuQmCC" />
+                <h2 class="chart-title">SSD's & HDD's</h2>
+                <hr>
+                <canvas id="storage"></canvas>
+            </div>
+            <div id="laploc" class="chart-card">
+                <img class="ico-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAWJJREFUSEvVlUFOg0AUht8bLjBaD0CC7utWS8QTdDxBPQJH6BH0BnoCewPbFF27txPj3qLugWemhDoII0ypTZwNIUzel/978waEHSzcAQP+F4S7gctYMiQEgQizeBGNC0udkvCjkz5L2RAABCD0taKzpYyCjSGrwuSMgDIBgK6hp9exjEIrSMvCa17GsuOP58enRohtYS3RayyjUsJSTzoU1q2VVKkPa0jPG0wJ4Kzr3PxUVYLseacTBFQnpcuqqCpB1EvP8wUAhR0SVVRVIEWEg8NBkBKFtsnqVBkhBWw1xU46BqBRC4e1qhohGowzJ71qgNWqag1RG7kbcOYk76ZEJlVWELV53/NvDGmMqqwheY+Sl5o0RlXWEFMahnD+toimJpXWV7063hnB/XdB+ozlA//t9FlD8qHVryC8jeX88g8gviCgu9w3XizlfLJ1SJFGPfU/4NZ60mLyK1s26okt6AvkTo4a0ziewwAAAABJRU5ErkJggg==" />
+                <h2 class="chart-title">Laptops Locations</h2>
+                <hr>
+                <canvas id="laptoplocation"></canvas>
+            </div>
+        </div>
+    </main>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////Main Content Starting @@@-->
+
+    <!-- JQERy JS File -->
+    <script src="jquery.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS File -->
+    <script src="scripts.js"></script>
+    <!-- Chart JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Charts Files -->
+    <script src="dchart1.js"></script>
+    <script src="dchart2.js"></script>
+    <script src="dchart3.js"></script>
+    <script src="dchart4.js"></script>
+</body>
+
+</html>

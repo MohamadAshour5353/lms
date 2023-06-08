@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- remixicons Library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Boxicons Library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- Tab Title -->
+    <title>Laptops Management System | </title>
+</head>
+
+<body>
+    <div class="loader-bg">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Sidebar starting @@@-->
+    <div id="saidebar" class="sidebar position-fixed top-0 bottom-0 border-end bg-white">
+        <div class="d-flex align-items-center p-3" style="background: url(Abs.png);">
+            <a href="#" class="sidebar-logo text-uppercase fw-bold text-decoration-none text-indigo fs-4"></a>
+            <img src="logo.png" alt="ic&i logo">
+            </a>
+
+        </div>
+        <div class="side-p2">
+            <ul class="sidebar-menu p-3 m-0 mb-0">
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span id="linkdes1" style=" font-size:0.9rem; color: #012060;" class="hide-menu">Main Pages</span>
+                </li>
+                <div>
+                    <div></div>
+                </div>
+                <!-- item 1 -->
+                <li id="hovli" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-dashboard-fill sidebar-menu-item-icon"></i>
+                        Home
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul" class="sidebar-dropdown-menu">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="index.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span style="color: #012060; font-size:0.9rem;" class="hide-menu">Laptops Logics</span>
+                </li>
+                <div>
+                    <div></div>
+                </div>
+                <!-- item 2 -->
+                <li id="hovli2" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-add-box-fill sidebar-menu-item-icon"></i>
+                        Add Device
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul2" class="sidebar-dropdown-menu" style="display: block;">
+                        <li class="sidebar-dropdown-menu-item">
+
+                            <a href="add.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Add Laptop Info
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- item 3 -->
+                <li id="hovli3" class="sidebar-menu-item has-dropdown">
+                    <a href="#">
+                        <i class="ri-database-2-fill sidebar-menu-item-icon"></i>
+                        System Data
+                        <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                    </a>
+                    <ul id="hovul3" class="sidebar-dropdown-menu" style="display: block;">
+                        <li class="sidebar-dropdown-menu-item">
+                            <a href="data.html">
+                                <i class="ri-arrow-right-s-line"></i>
+                                Laptops Data
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+        <div class="sidebar-overlay"></div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Sidebar Ending @@@-->
+
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////Main Content Starting @@@-->
+    <main class="bg-light">
+        <div class="p-2">
+            <!-- Header Nav Starting -->
+            <nav class="px-3 py-2 bg-white rounded shadow">
+                <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                <h5 id="HeadTitle" class="fw-bold mb-0 me-auto">Dashboard</h5>
+                <div class="dropdown me-3 d-none d-sm-block">
+                    <div class="cursor-pointer dropdown-toggle navbar-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="me-2 d-none d-sm-block">Admin.IC&I</span>
+                        <img class="navbar-profile-image" src="icon.png" alt="Image">
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#"><i class="ri-logout-box-fill"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Header Nav Ending -->
+        </div>
+        <div class="alert alert-primary" role="alert" id="DAlert">
+            Welcome To IC&I Laptops System /<a id="AlertHref" href="add.html" class="alert-link"> Add Laptop Info</a>
+        </div>
+        <!-- Add Laptop form -->
+        <div class="row">
+            <div class="col-8">
+                <h5 id="AddTitle">Laptop Specifications :</h5>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+        <div class="container">
+            <form name="addform" action="CRUD/create.php" method="POST">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-3">
+                        <label id="inlabel">Laptop Type :</label>
+                        <select class="form-select" name="ty" id="Type" required>
+                            <option selected hidden value="Choose Laptop Type">Choose Laptop Type</option>
+                            <option value="Lenovo" style="color: #012060;">Lenovo</option>
+                            <option value="Dell" style="color: #012060;">Dell</option>
+                            <option value="HP" style="color: #012060;">HP</option>
+                            <option value="Toshiba" style="color: #012060;">Toshiba</option>
+                            <option value="Asus" style="color: #012060;">Asus</option>
+                            <option value="Acer" style="color: #012060;">Acer</option>
+                            <option value="Samsung" style="color: #012060;">Samsung</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label id="inlabel">CPU Info :</label>
+                        <select class="form-select" name="cp" id="CPU" required>
+                            <option selected hidden value="Choose CPU Info">Choose CPU Info</option>
+                            <option value="i3/10" style="color: #012060;">i3/10 </option>
+                            <option value="i3/8" style="color: #012060;">i3/8</option>
+                            <option value="i3/7" style="color: #012060;">i3/7</option>
+                            <option value="i3/6" style="color: #012060;">i3/6</option>
+                            <option value="i5/4" style="color: #012060;">i5/4</option>
+                            <option value="i3/4" style="color: #012060;">i3/4</option>
+                            <option value="i5/2" style="color: #012060;">i5/2</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label id="inlabel">Ram :</label>
+                        <select class="form-select" name="Ra" id="RAM" required>
+                            <option selected hidden value="Choose Ram Size">Choose Ram Size</option>
+                            <option value="4GB" style="color: #012060;">4 GB</option>
+                            <option value="6GB" style="color: #012060;">6 GB</option>
+                            <option value="8GB" style="color: #012060;">8 GB</option>
+                            <option value="12GB" style="color: #012060;">12 GB</option>
+                            <option value="16GB" style="color: #012060;">16 GB</option>
+                            <option value="32GB" style="color: #012060;">32 GB</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-3">
+                        <label id="inlabel">Storage :</label>
+                        <select class="form-select" name="st" id="Storage" required>
+                            <option selected hidden value="Choose Hard Space">Choose Hard Space</option>
+                            <option value="320GB HDD" style="color: #012060;">320GB HDD</option>
+                            <option value="500GB HDD" style="color: #012060;">500GB HDD</option>
+                            <option value="1TB HDD" style="color: #012060;">1TB HDD</option>
+                            <option value="256GB SSD" style="color: #012060;">256GB SSD</option>
+                            <option value="512GB SSD" style="color: #012060;">512GB SSD</option>
+                            <option value="1TB SSD" style="color: #012060;">1TB SSD</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label id="inlabel">Serial Number :</label>
+                        <input class="form-control" type="text" id="SN" name="sn" placeholder="Enter Serial Number" required>
+                    </div>
+                    <div class="col-3">
+                        <label id="inlabel">Notes :</label>
+                        <input class="form-control" type="text" id="Notes" name="Notes" placeholder="Notes About Laptop">
+                    </div>
+                </div>
+                <div class="col-2"></div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-3">
+                        <label id="inlabel">Location :</label>
+                        <select class="form-select" name="loc" id="Location" required>
+                            <option id="op-hd" selected hidden value="Choose Hard Space">Choose Laptop Location</option>
+                            <option value="In Stock" style="color: #012060;">In Stock</option>
+                            <option value="With Employee" style="color: #012060;">With Employee</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label id="inlabel">Employee Name :</label>
+                        <input class="form-control" type="text" id="EM" name="em" placeholder="Enter Employee Name">
+                    </div>
+                    <div class="col-3">
+                        <label id="inlabel">City :</label>
+                        <select class="form-select" name="ci" id="City">
+                            <option selected hidden value="Choose Employee City">Choose Employee City</option>
+                            <option value="Damascus" style="color: #012060;">Damascus</option>
+                            <option value="Rural Damascus" style="color: #012060;">Rural Damascus</option>
+                            <option value="Daraa" style="color: #012060;">Daraa</option>
+                            <option value="Aleepo" style="color: #012060;">Aleepo</option>
+                            <option value="Raqqa" style="color: #012060;">Raqqa</option>
+                            <option value="Al Hassakeh" style="color: #012060;">Al Hassakeh</option>
+                            <option value="Daraa" style="color: #012060;">Qamishli</option>
+                            <option value="Homs" style="color: #012060;">Homs</option>
+                            <option value="Hama" style="color: #012060;">Hama</option>
+                            <option value="Deir Ezzor" style="color: #012060;">Deir Ezzor</option>
+                            <option value="Quneitra" style="color: #012060;">Quneitra</option>
+                            <option value="Lattakia" style="color: #012060;">Lattakia</option>
+                            <option value="Tartous" style="color: #012060;">Tartous</option>
+                            <option value="Al Sweida" style="color: #012060;">Al Sweida</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-3">
+                        <label id="inlabel">Starting Date :</label>
+                        <input class="form-control" type="date" placeholder="dd-mm-yyyy" name="sd" id="SD">
+                    </div>
+                    <div class="col-3">
+                        <label id="inlabel">Ending Date :</label>
+                        <input class="form-control" type="date" placeholder="dd-mm-yyyy" name="ed" id="ED">
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="button" id="NeXt" name="sub">
+                            <span class="button__text">Next</span>
+                            <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+                                    <line y2="19" y1="5" x2="12" x1="12"></line>
+                                    <line y2="12" y1="12" x2="19" x1="5"></line>
+                                </svg></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////Main Content Starting @@@-->
+
+    <!-- JQERy JS File -->
+    <script src="jquery.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS File -->
+    <script src="scripts.js"></script>
+    <!-- Chart JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Charts Files -->
+    <script src="dchart1.js"></script>
+    <script src="dchart2.js"></script>
+    <script src="dchart3.js"></script>
+    <script src="dchart4.js"></script>
+</body>
+
+</html>
